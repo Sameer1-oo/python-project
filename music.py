@@ -77,3 +77,5 @@ while cap.isOpened():
 
 cap.release()
 cv2.destroyAllWindows()
+# if you want to run this code fristly you  need some libararry  like = numpy, pygame, mediapipe, and make sure your puythone verison is 3.11 bcoz the open cv properly work in this livary 
+#sounds file is not correct adderess so i will be provide addersss sounds wav file 
