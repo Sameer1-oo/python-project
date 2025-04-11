@@ -1,0 +1,25 @@
+import pygame
+import time #We will use time.sleep to keep the sound playing
+
+# 1. Initialize pygame's mixer (for sound)
+pygame.mixer.init()
+
+# 2. Load your sound file
+try:
+    c_note_sound = pygame.mixer.Sound("c_note.wav")
+except FileNotFoundError:
+    print("Error: 'c_note.wav' not found. Make sure it's in the same folder as your Python script.")
+    exit() #Stop the program if the file is not found.
+
+# 3. Play the sound
+c_note_sound.play()
+
+# 4. Keep the program running so the sound can finish.
+#    Without this, the program would end immediately, and you might not hear the full sound.
+#    We will use time.sleep to keep the program running for 2 seconds. You can change this number.
+time.sleep(2)
+
+# 5. Stop pygame.
+pygame.quit()
+
+print("Sound played!")
